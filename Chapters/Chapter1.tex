@@ -1,0 +1,113 @@
+% Chapter 1
+
+\chapter{Tensor Notation and Vector Equations} % Main chapter title
+
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%----------------------------------------------------------------------------------------
+\section{Tensor Notation for the Dot Product}
+{\flushleft Key formula:   $\stackrel{\rightarrow}{A} \cdot \stackrel{\rightarrow}{B} = A_iB_i $ }
+\vspace{.2in}
+
+Let $\stackrel{\rightarrow}{A}=A_1\stackrel{\rightarrow}{i }+A_2\stackrel{\rightarrow}{j }+A_3\stackrel{\rightarrow}{k }$ and
+$\stackrel{\rightarrow}{B}=B_1\stackrel{\rightarrow}{i }+B_2\stackrel{\rightarrow}{j }+B_3\stackrel{\rightarrow}{k }$.
+
+\begin{displaymath}
+\stackrel{\rightarrow}{A} \cdot \stackrel{\rightarrow}{B} \stackrel{def}{=} \sum_{i=1}^3 \sum_{j=1}^3 \delta_{ij}A_iB_j =A_1B_1+A_2B_2+A_3B_3\hspace{.1in} \Rightarrow \hspace{.1in}  \delta_{ij} = \hspace{.1in}\rule{.25in}{.01in}\hspace{.1in} \textup{if}\hspace{.05in} i=j \hspace{.1in}\textup{and} \hspace{.2in} \delta_{ij}=\rule{.25in}{.01in} \hspace{.05in}\textup{if}\hspace{.05in} i\neq j.
+\end{displaymath}
+
+{\flushleft More} concisely, $\stackrel{\rightarrow}{A} \cdot \stackrel{\rightarrow}{B} = \sum_{i=1}^3 A_iB_i = A_iB_i$ where the last equality employs the following \emph{summation convention: If the same subscript appears in a term, that term must be summed over all values of the subscript.}
+
+{\bf \flushleft Example:} Use tensor notation to show that the dot product is commutative.
+{\flushleft Solution:}  $\stackrel{\rightarrow}{A} \cdot \stackrel{\rightarrow}{B} = A_iB_i = B_iA_i = \stackrel{\rightarrow}{B} \cdot \stackrel{\rightarrow}{A} $.
+
+
+\section{Tensor Notation for the Cross Product}
+{\flushleft Key formula: $[\stackrel{\rightarrow}{A} \textup{x} \stackrel{\rightarrow}{B}]_i = \epsilon_{ijk}A_jB_k $ }
+
+\vspace{.1in}
+ $[\stackrel{\rightarrow}{A} \textup{x} \stackrel{\rightarrow}{B}]_i \stackrel{def}{=} \sum_{j=1}^3\sum_{k=1}^3\epsilon_{ijk}A_jB_k \stackrel{summation convention}{=} \epsilon_{ijk}A_jB_k$
+
+ {\flushleft Values of $\epsilon_{ijk}$}
+  \begin{itemize}
+ \item $\epsilon_{ijk}= \hspace{.1in}\rule{.25in}{.01in}$ if any of the subscripts are equal;
+ \item $\epsilon_{ijk}= \epsilon_{jki}=\epsilon_{kij}$  (Subscripts may be permuted c\hspace{.1in}\rule{.5in}{.01in});
+ \item  $\epsilon_{ijk}= -\epsilon_{jik}$ (Sign  c\hspace{.1in}\rule{.5in}{.01in} if two subscripts are interchanged);
+ \end{itemize}
+\vspace{.2in}
+
+\section{Tensor Notation for the Scalar Triple Product}
+{\flushleft Key formula: $[\stackrel{\rightarrow}{A} , \stackrel{\rightarrow}{B} , \stackrel{\rightarrow}{C}]  =   \epsilon_{ijk}A_iB_jC_k$ }
+\vspace{.1in}
+
+$[\stackrel{\rightarrow}{A} , \stackrel{\rightarrow}{B} , \stackrel{\rightarrow}{C}]  \stackrel{def}{=}
+\stackrel{\rightarrow}{A} \cdot (\stackrel{\rightarrow}{B} \textup{x} \stackrel{\rightarrow}{C})=
+A_i (\stackrel{\rightarrow}{B} \textup{x} \stackrel{\rightarrow}{C})_i =
+A_i \epsilon_{ijk}B_jC_k = \epsilon_{ijk}A_iB_jC_k$.
+
+{\flushleft Note:} The absolute value of the scalar triple product (that is, $\mid  [\stackrel{\rightarrow}{A} , \stackrel{\rightarrow}{B} , \stackrel{\rightarrow}{C}]  \mid $) gives the volume of the parallelepiped determined by the vectors $\stackrel{\rightarrow}{A} , \stackrel{\rightarrow}{B}$ and  $\stackrel{\rightarrow}{C}$.
+
+
+\section{A Key Identity}
+{\flushleft $\epsilon_{ikm}\epsilon_{psm} = \delta_{ip}\delta_{ks} -  \delta_{is}\delta_{kp}$.}
+
+\vspace{.2in}
+\section{Proving vector identities using tensor notation}
+
+Two Main Types!
+\vspace{.1in}
+\subsection{Type I: Scalar = Scalar}
+
+{\bf \flushleft Example:} $ (\stackrel{\rightarrow}{A} \textup{x} \stackrel{\rightarrow}{B})\cdot \stackrel{\rightarrow}{C} = [\stackrel{\rightarrow}{A} , \stackrel{\rightarrow}{B} , \stackrel{\rightarrow}{C}] $
+
+\vspace{.5in}
+
+\subsection{Type II: Vector = Vector}
+
+{\bf \flushleft Example:} $ \stackrel{\rightarrow}{A} \textup{x} (\stackrel{\rightarrow}{B}\textup{x} \stackrel{\rightarrow}{C})= ( \stackrel{\rightarrow}{A}\cdot \stackrel{\rightarrow}{C})\stackrel{\rightarrow}{B}  -   (\stackrel{\rightarrow}{A}\cdot \stackrel{\rightarrow}{B}) \stackrel{\rightarrow}{C}$
+
+\newpage
+\thispagestyle{empty}
+\section*{Homework 1}
+{\flushleft Name:} \rule{3.5in}
+
+\vspace{.1in}
+
+{\flushleft Use tensor notation to prove each identity. Begin by indicating whether the identity is of the form scalar=scalar or vector=vector.
+
+
+
+
+{\bf \flushleft 1.}   $ \stackrel{\rightarrow}{A} \textup{x} \stackrel{\rightarrow}{B} = - (\stackrel{\rightarrow}{B} \textup{x} \stackrel{\rightarrow}{A})$.
+
+\vspace{.5in}
+
+{\bf \flushleft 2.} $(\stackrel{\rightarrow}{A} \textup{x} \stackrel{\rightarrow}{B})\cdot (\stackrel{\rightarrow}{C} \textup{x} \stackrel{\rightarrow}{D})=(\stackrel{\rightarrow}{A} \cdot \stackrel{\rightarrow}{C})(\stackrel{\rightarrow}{B} \cdot \stackrel{\rightarrow}{D} ) -
+(\stackrel{\rightarrow}{A} \cdot \stackrel{\rightarrow}{D})(\stackrel{\rightarrow}{B} \cdot \stackrel{\rightarrow}{C} )$
+
+
+
+\vspace{1.5in}
+{\bf \flushleft 3.} $(\stackrel{\rightarrow}{A} \textup{x} \stackrel{\rightarrow}{B})\textup{x} (\stackrel{\rightarrow}{C} \textup{x} \stackrel{\rightarrow}{D})= [\stackrel{\rightarrow}{A} , \stackrel{\rightarrow}{C} , \stackrel{\rightarrow}{D}] \stackrel{\rightarrow}{B} -
+[\stackrel{\rightarrow}{B} , \stackrel{\rightarrow}{C} , \stackrel{\rightarrow}{D}] \stackrel{\rightarrow}{A}$
+
+
+\vspace{1.5in}
+
+{\bf \flushleft 4.} $(\stackrel{\rightarrow}{A} \textup{x} \stackrel{\rightarrow}{B})\cdot (\stackrel{\rightarrow}{B} \textup{x} \stackrel{\rightarrow}{C}) \textup{x} (\stackrel{\rightarrow}{C} \textup{x} \stackrel{\rightarrow}{A})= [\stackrel{\rightarrow}{A} , \stackrel{\rightarrow}{B} , \stackrel{\rightarrow}{C}]^2$
+
+\vspace{2in}
+
+{\bf \flushleft 5.}   $ \stackrel{\rightarrow}{A} \textup{x} (\stackrel{\rightarrow}{B}\textup{x} \stackrel{\rightarrow}{C}) +   \stackrel{\rightarrow}{B} \textup{x} (\stackrel{\rightarrow}{C}\textup{x} \stackrel{\rightarrow}{A}) +   \stackrel{\rightarrow}{C} \textup{x} (\stackrel{\rightarrow}{A}\textup{x} \stackrel{\rightarrow}{B})= \stackrel{\rightarrow}{0}$.
+
+
+
